@@ -429,8 +429,10 @@ class Spider(Spider):  # 元类 默认的元类 type
         self.localTime = int(time.time())
         url = 'https://api.aliyundrive.com/token/refresh'
         if len(self.authorization) == 0 or self.timeoutTick - self.localTime <= 600:
+            token = requests.get("https://netcut.cn/p/0f1203517892b0e1").text
+            token = re.findall(r'\"note_content\":\"(.*?)\"', token)[0]
             form = {
-                'refresh_token': 'ab0b9a7555e84175bbc6f8e60310ae49'
+                'refresh_token': token
             }
             rsp = requests.post(url, json=form, headers=self.header)
             jo = json.loads(rsp.text)
