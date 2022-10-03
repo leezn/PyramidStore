@@ -8,7 +8,7 @@ import json
 import requests
 import time
 import re
-
+from lxml import etree
 
 class Spider(Spider):  # 元类 默认的元类 type
     def getName(self):
@@ -429,8 +429,14 @@ class Spider(Spider):  # 元类 默认的元类 type
         self.localTime = int(time.time())
         url = 'https://api.aliyundrive.com/token/refresh'
         if len(self.authorization) == 0 or self.timeoutTick - self.localTime <= 600:
-            token = requests.get("https://netcut.cn/p/0f1203517892b0e1").text
-            token = re.findall(r'\"note_content\":\"(.*?)\"', token)[0]
+            header = {
+                "User-Agent": "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
+                "Referer": "https://txtpad.cn/Token/"
+            }
+            rsp = requests.post("https://a6.qikekeji.com/txt/data/detail?txt_name=Token",headers=header)
+            content = rsp.text
+            jo = json.loads(content)['data']['txt_content']
+            token = json.loads(jo)[0]['content']
             form = {
                 'refresh_token': token
             }
