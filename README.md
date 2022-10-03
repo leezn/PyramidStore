@@ -29,7 +29,7 @@
 ### 在线配置
 1. 安装apk (测试阶段只提供armeabi-v7a和x86_64)
 2. [使用在线配置文件](https://raw.iqiq.io/lm317379829/PyramidStore/pyramid/py.json):https://raw.iqiq.io/lm317379829/PyramidStore/pyramid/py.json
-3. 若果阿里系无法播放，请去[更新token](https://netcut.cn/Token)
+3. 若果阿里系无法播放，可自行去[NETCUT](https://netcut.cn/Token)更新Token
 
 ### 离线配置
 1. 安装apk
