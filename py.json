@@ -98,7 +98,16 @@
 		"quickSearch": 1,
 		"filterable": 1,
 		"ext": "https://raw.iqiq.io/lm317379829/PyramidStore/pyramid/plugin/py_genmov.py"
-	}, {
+	},  {
+		"key": "py_qie",
+		"name": "企鹅体育",
+		"type": 3,
+		"api": "py_qie",
+		"searchable": 0,
+		"quickSearch": 0,
+		"filterable": 1,
+		"ext": "https://raw.iqiq.io/lm317379829/PyramidStore/pyramid/plugin/py_qie.py"
+	},{
 		"key": "py_huya",
 		"name": "虎牙",
 		"type": 3,
