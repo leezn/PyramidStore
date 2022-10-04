@@ -8,7 +8,6 @@ import json
 import requests
 import time
 import re
-from lxml import etree
 
 class Spider(Spider):  # 元类 默认的元类 type
     def getName(self):
@@ -431,14 +430,7 @@ class Spider(Spider):  # 元类 默认的元类 type
         self.localTime = int(time.time())
         url = 'https://api.aliyundrive.com/token/refresh'
         if len(self.authorization) == 0 or self.timeoutTick - self.localTime <= 600:
-            header = {
-                "User-Agent": "Mozilla/5.0 (Linux; Android 4.4.2; Nexus 4 Build/KOT49H) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.114 Mobile Safari/537.36",
-                "Referer": "https://txtpad.cn/Token/"
-            }
-            rsp = requests.post("https://a6.qikekeji.com/txt/data/detail?txt_name=Token",headers=header)
-            content = rsp.text
-            jo = json.loads(content)['data']['txt_content']
-            token = json.loads(jo)[0]['content']
+            token = requests.get('https://kebedd69.github.io/TVbox-interface/token.json').text
             form = {
                 'refresh_token': token
             }
