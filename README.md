@@ -29,10 +29,9 @@
 ### 在线配置
 1. 安装apk (测试阶段只提供armeabi-v7a和x86_64)
 2. [使用在线配置文件]
-
-   地址1：https://raw.githubusercontent.com/UndCover/PyramidStore/main/py.json
-   地址2：https://raw.iqiq.io/lm317379829/PyramidStore/pyramid/py.json
-   地址3：https://cdn.staticaly.com/gh/leezn/PyramidStore/test/py.json
+   https://raw.githubusercontent.com/UndCover/PyramidStore/main/py.json
+   https://raw.iqiq.io/lm317379829/PyramidStore/pyramid/py.json
+   https://cdn.staticaly.com/gh/leezn/PyramidStore/test/py.json
 
 ### 离线配置
 1. 安装apk
